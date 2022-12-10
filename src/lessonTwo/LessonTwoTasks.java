@@ -1,6 +1,8 @@
 package lessonTwo;
 
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class LessonTwoTasks {
@@ -14,6 +16,7 @@ public class LessonTwoTasks {
         getMinAndMax();
         System.out.println(checkBalance());
         arrayShift();
+        arrayShiftModer();
     }
 
     public static void componentChange() {
@@ -77,8 +80,13 @@ public class LessonTwoTasks {
                 min = j;
             }
         }
-        System.out.println(max);
-        System.out.println(min);
+        String result = String.format("""
+                %s
+                %s
+                """, max, min);
+//        System.out.printf("%s\n%s", max, min);
+        System.out.println(result);
+
     }
 
     public static boolean checkBalance() {
@@ -111,5 +119,15 @@ public class LessonTwoTasks {
             array[0] = n;
         }
         System.out.println(Arrays.toString(array));
+    }
+
+    public static void arrayShiftModer() {
+        int[] array = {1, 2, 3, 4, 5, 6};
+        System.out.println("Введите число смещения массива: ");
+        int position = scanner.nextInt();
+
+        List<Integer> list = new java.util.ArrayList<>(Arrays.stream(array).boxed().toList());
+        Collections.rotate(list, position);
+        System.out.println(list);
     }
 }
