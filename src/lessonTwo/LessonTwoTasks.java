@@ -84,7 +84,6 @@ public class LessonTwoTasks {
                 %s
                 %s
                 """, max, min);
-//        System.out.printf("%s\n%s", max, min);
         System.out.println(result);
 
     }
