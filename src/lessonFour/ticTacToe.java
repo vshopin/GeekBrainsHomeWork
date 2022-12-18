@@ -138,7 +138,6 @@ public class ticTacToe {
   }
 
   // проверка что игрок вводит валидные значения полей для хода
-  @SuppressWarnings("BooleanMethodIsAlwaysInverted")
   private static boolean isCellValid(int rowIndex, int colIndex) {
     if (rowIndex < 0 || rowIndex >= SIZE || colIndex < 0 || colIndex >= SIZE) {
       return false;
