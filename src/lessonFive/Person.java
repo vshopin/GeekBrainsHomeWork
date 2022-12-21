@@ -1,27 +1,23 @@
 package lessonFive;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
 public class Person {
 
-  String firstName;
-  String lastName;
-  String position;
-  String email;
-  String phone;
-  int salary;
-  int age;
-
-  Person(String firstName, String lastName, String position, String email, String phone, int salary, int age) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.position = position;
-    this.email = email;
-    this.phone = phone;
-    this.salary = salary;
-    this.age = age;
-  }
-
-  public void getInfoPerson() {
-    System.out.println(this.firstName + "; " + this.lastName + "; " + this.position + "; " + this.email + "; " + this.phone + "; " + this.salary + "; " + this.age);
-  }
-
+  @Getter
+  private String firstName;
+  @Getter
+  private String lastName;
+  @Getter
+  private String position;
+  @Getter
+  private String email;
+  @Getter
+  private String phone;
+  @Getter
+  private int salary;
+  @Getter
+  private int age;
 }
