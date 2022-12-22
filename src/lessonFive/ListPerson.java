@@ -13,10 +13,7 @@ public class ListPerson {
 
     for (Person person : personArray) {
       if (person.getAge() >= 40) {
-        String result = String.format("""
-          %s; %s; %s; %s; %s; %s; %s
-          """, person.getFirstName(), person.getLastName(), person.getPosition(), person.getEmail(), person.getPhone(), person.getSalary(), person.getAge());
-        System.out.print(result);
+        System.out.println(person);
       }
     }
   }
