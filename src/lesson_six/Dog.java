@@ -1,11 +1,7 @@
 package lesson_six;
 
-
-import lombok.Builder;
-
 public class Dog extends Animal {
 
-    @Builder
     public Dog(int maxRun, int maxSwim, int maxJump) {
         super(maxRun, maxSwim, maxJump);
     }
