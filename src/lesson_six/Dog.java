@@ -1,15 +1,18 @@
-package lessonSix;
+package lesson_six;
 
+
+import lombok.Builder;
 
 public class Dog extends Animal {
 
+    @Builder
     public Dog(int maxRun, int maxSwim, int maxJump) {
         super(maxRun, maxSwim, maxJump);
     }
 
     @Override
     public boolean run(int dist) {
-        if (this.maxRun >= dist) {
+        if (getMaxRun() >= dist) {
             System.out.printf("Cобака пробежала дистанцию %s\n", dist);
             return true;
         }
@@ -19,7 +22,7 @@ public class Dog extends Animal {
 
     @Override
     public boolean swim(int dist) {
-        if (this.maxRun >= dist) {
+        if (getMaxSwim() >= dist) {
             System.out.printf("Собака проплыла дистанцию %s\n", dist);
             return true;
         }
@@ -29,7 +32,7 @@ public class Dog extends Animal {
 
     @Override
     public boolean jump(int dist) {
-        if (this.maxRun >= dist) {
+        if (getMaxJump() >= dist) {
             System.out.printf("Собака прыгнула на дистанцию %s\n", dist);
             return true;
         }
