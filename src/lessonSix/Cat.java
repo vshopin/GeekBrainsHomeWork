@@ -1,5 +1,6 @@
 package lessonSix;
 
+
 public class Cat extends Animal {
 
     public Cat(int maxRun, int maxSwim, int maxJump) {
@@ -9,12 +10,10 @@ public class Cat extends Animal {
     @Override
     public boolean run(int dist) {
         if (this.maxRun >= dist) {
-            System.out.printf("Кот пробежал дистанцию %s", dist);
-            System.out.println();
+            System.out.printf("Кот пробежал дистанцию %s\n", dist);
             return true;
         }
-        System.out.printf("Кот не смог пробежать дистанцию %s", dist);
-        System.out.println();
+        System.out.printf("Кот не смог пробежать дистанцию %s\n", dist);
         return false;
     }
 
@@ -27,12 +26,10 @@ public class Cat extends Animal {
     @Override
     public boolean jump(int dist) {
         if (this.maxRun >= dist) {
-            System.out.printf("Кот прыгнул на дистанцию %s", dist);
-            System.out.println();
+            System.out.printf("Кот прыгнул на дистанцию %s\n", dist);
             return true;
         }
-        System.out.printf("Кот не смог прыгнуть на дистанцию %s", dist);
-        System.out.println();
+        System.out.printf("Кот не смог прыгнуть на дистанцию %s\n", dist);
         return false;
     }
 }
